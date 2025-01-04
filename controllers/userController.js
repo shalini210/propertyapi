@@ -23,7 +23,7 @@ exports.checkLogin = async( u )=>
     {
         if(d.length>0)
         {
-            result = true
+            result = d
         }
     })
     .catch((e)=>console.log(e))
