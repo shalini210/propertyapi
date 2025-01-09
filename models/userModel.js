@@ -7,7 +7,8 @@ var userSchema = new Schema({
          pwd: String,
          email:String,
          contact:String,
-        verified:Boolean 
+        verified:Boolean ,
+        type:String,
 });
 // Compile model from schema
 var userModel = mongoose.model('user', userSchema );

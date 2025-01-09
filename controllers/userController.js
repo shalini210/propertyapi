@@ -7,7 +7,8 @@ exports.insertUser=async (u)=>
             pwd: u.pwd,
             email:u.email,
             contact:u.contact,
-           verified:u.verified 
+           verified:u.verified,
+           type:u.type,
         })
         let i="fail";
          await newuser.save()
@@ -32,5 +33,10 @@ exports.checkLogin = async( u )=>
 exports.getAll = async()=>
 {
     let data = await userModel.find()
+    return data;
+}
+exports.deleteAll = async()=>
+{
+    let data = await userModel.deleteMany();
     return data;
 }
