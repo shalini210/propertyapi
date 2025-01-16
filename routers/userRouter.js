@@ -18,6 +18,11 @@ router.get("/",async(req,res)=>
     let d = await userController.getAll();
     res.send(d)
 })
+router.put("/updatepassowrd",async(req,res)=>
+{
+    let d = await userController.updatePwd(req.body);
+    res.send(d);
+})
 router.get("/deleteall",async(req,res)=>
 {
     let d = await userController.deleteAll();
